@@ -1,18 +1,15 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 import HomeScreen from "./screens/HomeScreen";
+import React from "react";
 
 const App = () => {
   return (
-    <Router>
+    <React.Fragment>
       <Header />
-      <Routes>
-        <Route path="/" element={<HomeScreen />} />
-      </Routes>
+      <HomeScreen />
       <Footer />
-    </Router>
+    </React.Fragment>
   );
 };
 

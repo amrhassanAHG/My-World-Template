@@ -1,7 +1,13 @@
 /* Start imports */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap');
 /* End imports */
 
 /* Start variables */
+:root {
+  --main-color: #2196F3;
+  --main-color-alt: #1787e0;
+  --main-duration: 0.3s;
+}
 /* End variables */
 
 /* Start Global rules */
@@ -15,6 +21,12 @@
 }
 html {
   scroll-behavior: smooth;
+}
+body {
+  font-family: 'Cairo', sans-serif;
+}
+main {
+  margin-top: -21px;
 }
 ul {
   list-style: none;

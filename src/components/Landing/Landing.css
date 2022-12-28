@@ -1,0 +1,55 @@
+.landing {
+    position: relative;
+    left: 0;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+}
+.landing::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -30px;
+    width: 100%;
+    height: 100%;
+    background-color: #ECECEC;
+    z-index: -2;
+    transform: skewY(-7deg);
+    transform-origin: top left;
+}
+.landing .container {
+    min-height: calc(100% - 73px);
+    position: relative;
+    top: 73px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 140px;
+}
+
+.landing .text {
+
+}
+.landing .text h1 {
+    
+}
+.landing .text p {
+    
+}
+
+.landing .image {
+    
+}
+.landing .image img {
+    width: 600px;
+    max-width: 100%;
+}
+
+.landing .go-down {
+    color: var(--main-color);
+}
+.landing .go-down .icon {
+    font-size: 1.5rem;
+}
+
+
+/* Start Media Query */
