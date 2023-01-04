@@ -54,7 +54,7 @@ const megaIcons2 = [
   },
   {
     name: "Top Videos",
-    section: "video",
+    section: "videos",
     icon: faPlayCircle,
   },
   {

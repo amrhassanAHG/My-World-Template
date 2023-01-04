@@ -1,0 +1,123 @@
+.pricing {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    position: relative;
+    background-color: var(--section-background);
+}
+.pricing .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 50px 30px;
+}
+
+.pricing .box {
+    position: relative;
+    background-color: white;
+    -webkit-box-shadow: var(--main-box-shadow);
+    -moz-box-shadow: var(--main-box-shadow);
+    -ms-box-shadow: var(--main-box-shadow);
+    box-shadow: var(--main-box-shadow);
+    z-index: 1;
+    text-align: center;
+}
+.pricing .box::before, 
+.pricing .box::after {
+    content: "";
+    position: absolute;
+    background-color: #F6F6F6;
+    width: 0;
+    height: 50%;
+    z-index: -1;
+    transition: var(--main-duration);
+}
+.pricing .box::before {
+    left: 0;
+    top: 0;
+}
+.pricing .box::after {
+    right: 0;
+    bottom: 0;
+}
+.pricing .box:hover::before,
+.pricing .box:hover::after {
+    width: 100%;
+}
+.pricing .box.popular .label {
+    position: absolute;
+    right: 20px;
+    writing-mode: vertical-rl;
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px 10px 35px 10px;
+    font-size: 1.15rem;
+    font-weight: bold;
+    width: 40px;
+}
+.pricing .box.popular .label::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border: 20px solid transparent;
+    border-bottom-color: white;
+}
+
+.pricing .box .title {
+    font-weight: bold;
+    margin: 30px 0;
+    font-size: 1.45rem;
+    letter-spacing: -0.5px;
+}
+.pricing .box img {
+  width: 80px;
+  margin-bottom: 30px;   
+}
+
+.pricing .box .price {
+    margin-bottom: 20px;
+}
+.pricing .box .price .amount {
+    color: var(--main-color);
+    display: block;
+    width: 100%;
+    align-items: center;
+    font-size: 3.8rem;
+    font-weight: bold;
+}
+.pricing .box .price .time {
+    margin-top: 5px;
+    color: #777;
+}
+
+.pricing .box li {
+    padding: 20px;
+    text-align: left;
+    border-top: 1px solid #eee;
+}
+.pricing .box li .icon {
+    margin-right: 10px;
+    color: var(--main-color);
+}
+.pricing .box a {
+    display: block;
+    width: fit-content;
+    margin: 30px auto 40px;
+    padding: 15px 20px;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    border-radius: 6px;
+    font-weight: bold;
+    transition: var(--main-duration);
+}
+.pricing .box a:hover {
+    background-color: var(--main-color-alt);
+    color: white;
+    border-color: var(--main-color-alt);
+}
+
+/* Start Media Query */
+@media (min-width: 1200px) {
+    .pricing .box.popular {
+        transform: translateY(-20px);
+    }
+}

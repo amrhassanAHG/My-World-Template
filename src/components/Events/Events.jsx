@@ -28,9 +28,9 @@ const Events = () => {
 
   useEffect(() => {
     updateTime(time);
-    // setInterval(() => {
-    //   setTime((oldTime) => oldTime - 1);
-    // }, 1000);
+    setInterval(() => {
+      setTime((oldTime) => oldTime - 1);
+    }, 1000);
   }, []);
 
   useEffect(() => {

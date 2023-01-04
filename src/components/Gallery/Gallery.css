@@ -4,19 +4,6 @@
     position: relative;
     background-color: var(--section-background);
 }
-.gallery::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 30px;
-    z-index: 1;
-    background-image: linear-gradient(135deg, white 25%, transparent 25%),
-                      linear-gradient(225deg, white 25%, transparent 25%);
-    background-size: 30px 30px;
-    background-repeat: repeat-x;
-}
 .gallery .container {
     display: grid;
     gap: 50px;
@@ -25,7 +12,10 @@
 .gallery .box {
     padding: 15px;
     background-color: white;
-    box-shadow: 0px 12px 20px 0px rgb(0 0 0 / 13%), 0px 2px 4px 0px rgb(0 0 0 / 12%);
+    -webkit-box-shadow: var(--main-box-shadow);
+    -moz-box-shadow: var(--main-box-shadow);
+    -ms-box-shadow: var(--main-box-shadow);
+    box-shadow: var(--main-box-shadow);
 }
 .gallery .box .image {
     position: relative;

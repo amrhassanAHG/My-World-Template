@@ -40,6 +40,7 @@ const services = [
 const Services = () => {
   return (
     <div className="services" id="services">
+      <div className="spikes"></div>
       <h2 className="main-title">Services</h2>
       <div className="container">
         {services.map((service, id) => (

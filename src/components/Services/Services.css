@@ -4,19 +4,6 @@
     position: relative;
     background-color: var(--section-background);
 }
-.services::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 30px;
-    z-index: 1;
-    background-image: linear-gradient(135deg, white 25%, transparent 25%),
-                      linear-gradient(225deg, white 25%, transparent 25%);
-    background-size: 30px 30px;
-    background-repeat: repeat-x;
-}
 .services .container {
     display: grid;
     gap: 40px;
@@ -25,10 +12,10 @@
 .services .box {
     position: relative;
     background-color: white;
-    -webkit-box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
-    -moz-box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
-    -ms-box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
-    box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+    -webkit-box-shadow: var(--main-box-shadow);
+    -moz-box-shadow: var(--main-box-shadow);
+    -ms-box-shadow: var(--main-box-shadow);
+    box-shadow: var(--main-box-shadow);
     counter-increment: services;
     transition: var(--main-duration);
 }

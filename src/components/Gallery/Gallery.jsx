@@ -19,6 +19,7 @@ const galleryImages = [
 const Gallery = () => {
   return (
     <div className="gallery" id="gallery">
+      <div className="spikes"></div>
       <h2 className="main-title">Gallery</h2>
       <div className="container">
         {galleryImages.map((image, id) => (

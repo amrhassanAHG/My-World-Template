@@ -1,6 +1,7 @@
 .work-steps {
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
+    position: relative;
     background-color: var(--section-background);
 }
 .work-steps .container {

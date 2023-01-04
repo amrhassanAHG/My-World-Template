@@ -1,0 +1,129 @@
+footer {
+    background-color: #191919;
+    padding: 60px 0 0 0;
+    color: white;
+    position: relative;
+}
+footer .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px;
+}
+/******************* First Box ********************/
+footer h3 {
+    font-size: 3.5rem;
+    letter-spacing: 6px;
+    font-weight: 900;
+}
+footer .social {
+    display: flex;
+    margin: 20px 0;
+}
+footer .social li {
+    margin-right: 10px;
+}
+footer .social li a {
+    color: #b9b9b9;
+    background-color: #313131;
+    width: 50px;
+    height: 50px;
+    font-size: 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--main-duration);
+}
+footer .social li .facebook:hover {
+    background-color: #1877f2;
+}
+footer .social li .twitter:hover {
+    background-color: #1da1f2;
+}
+footer .social li .youtube:hover {
+    background-color: #ff0000;
+}
+footer .text {
+    line-height: 1.8;
+    color: #b9b9b9;
+}
+/******************* Second Box ********************/
+footer .links {
+
+}
+footer .links li {
+    padding: 15px 0;
+}
+footer .links li:not(:last-child) {
+    border-bottom: 1px solid #444;
+}
+footer .links li a {
+    color: #b9b9b9;
+    transition: var(--main-duration);
+}
+footer .links li a .icon {
+    color: var(--main-color);
+    margin-right: 10px;
+    font-size: 0.9rem;
+    font-weight: 900;
+}
+footer .links li:hover a {
+    color: white;
+    padding-left: 10px;
+}
+/******************* Third Box ********************/
+footer .line {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    color: #b9b9b9;
+}
+footer .line .icon {
+    font-size: 1.6rem;
+    margin-right: 15px;
+    color: var(--main-color);
+}
+footer .line .info {
+    flex: 1;
+    line-height: 1.7;
+    letter-spacing: 0.7px;
+}
+footer .line .info span {
+    display: block;
+}
+/******************* Fourth Box ********************/
+footer .footer-gallery img {
+    max-width: 80px;
+    margin: 1px 2px;
+    border: 3px solid white;
+}
+/******************* Copyright ********************/
+footer .copyright {
+    text-align: center;
+    padding: 25px 0;
+    border-top: 1px solid #444;
+    margin-top: 50px;
+}
+footer .copyright span {
+    color: var(--main-color);
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+/* Start Media Query */
+@media (max-width: 590px) {
+    footer .box {
+        text-align: center;
+    }
+    footer .social {
+        justify-content: center;
+    }
+    footer .line {
+        flex-direction: column;
+    }
+    footer .line .info {
+        letter-spacing: 0.3px;
+    }
+    footer .line .icon {
+        margin-bottom: 15px;
+    }
+}
