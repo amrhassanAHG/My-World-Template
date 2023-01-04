@@ -1,0 +1,46 @@
+.our-skills {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+.our-skills .container {
+    display: flex;
+    align-items: center;
+}
+.our-skills .skills {
+    flex: 1;
+}
+.our-skills .skills .skill h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.our-skills .skills .skill h3 span {
+    font-size: 0.82rem;
+    color: var(--main-color);
+    border: 1px solid #ccc;
+    padding: 3px 5px;
+    border-radius: 4px;
+    font-weight: bold;   
+}
+.our-skills .skills .skill .the-progress {
+    position: relative;
+    height: 30px;
+    width: 100%;
+    background-color: #EEE;
+    margin-bottom: 10px;
+}
+.our-skills .skills .skill .the-progress span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: var(--main-color);
+}
+
+/* Start Media Query */
+@media (max-width:992px) {
+    .our-skills img {
+        display: none;
+    }
+}

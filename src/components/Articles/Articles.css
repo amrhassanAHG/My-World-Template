@@ -1,0 +1,63 @@
+.articles {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    position: relative;
+}
+.articles .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px;
+}
+.articles .box {
+    overflow: hidden;
+    -webkit-box-shadow: 0 2px 15px rgb(0, 0, 0, 15%);
+    -moz-box-shadow: 0 2px 15px rgb(0, 0, 0, 15%);
+    -ms-box-shadow: 0 2px 15px rgb(0, 0, 0, 15%);
+    box-shadow: 0 2px 15px rgb(0, 0, 0, 15%);
+    border-radius: 6px;
+    transition: var(--main-duration);
+}
+.articles .box:hover {
+    -webkit-box-shadow: 0 2px 15px rgb(0, 0, 0, 30%);
+    -moz-box-shadow: 0 2px 15px rgb(0, 0, 0, 30%);
+    -ms-box-shadow: 0 2px 15px rgb(0, 0, 0, 30%);
+    box-shadow: 0 2px 15px rgb(0, 0, 0, 30%);
+    transform: translateY(-15px);
+}
+.articles .box img {
+    max-width: 100%;
+}
+.articles .box .content {
+    padding: 20px;
+}
+.articles .box .content p {
+    color: #777;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+.articles .box .info {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #E6e6e7;
+}
+.articles .box .info a {
+    color: var(--main-color);
+    font-weight: bold;
+}
+.articles .box .info .icon {
+    color: var(--main-color);
+    font-size: 0.9rem;
+}
+.articles .box:hover .info .icon {
+    animation: moving-arrow 0.6s linear infinite;
+}
+
+/* Start animation */
+@keyframes moving-arrow {
+    100% {
+        transform: translateX(10px);
+    }
+}
+/* End animation */

@@ -47,9 +47,9 @@ header nav > ul > li > a {
 header nav > ul > li > a::before {
     content: "";
     position: absolute;
-    left: -100%;
+    left: 0;
     top: 0;
-    width: 100%;
+    width: 0;
     height: 100%;
     background-image: linear-gradient(180deg, var(--main-color) 7%, #fafafa 7%);
     z-index: -1;
@@ -59,11 +59,83 @@ header nav > ul > li > a:hover {
     color: var(--main-color);
 }
 header nav > ul > li > a:hover::before {
-    left: 0;
+    width: 100%;
+}
+header nav > ul > li:last-child:hover > .mega-menu {
+    top: calc(100% + 1px);
+    opacity: 1;
+    z-index: 1000;
 }
 
+/* Start Mega Menu */
+header .mega-menu {
+    position: absolute;
+    left: 0;
+    top: -520%;
+    background-color: white;
+    z-index: -10;
+    display: flex;
+    width: 100%;
+    gap: 40px;
+    padding: 30px;
+    border-bottom: 4px solid var(--main-color);
+    opacity: 0;
+    transition: top var(--main-duration), opacity var(--main-duration);
+}
+header .mega-menu .image img {
+    max-width: 100%;
+}
+header .mega-menu .links {
+    min-width: 230px;
+    flex: 1;
+}
+header .mega-menu .links li a {
+    color: var(--main-color);
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 15px;
+    position: relative;
+}
+header .mega-menu .links li:not(:last-child) a {
+    border-bottom: 1px solid #e9e6e6;
+}
+header .mega-menu .links li a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #FAFAFA;
+    z-index: -1;
+    transition: var(--main-duration);
+}
+header .mega-menu .links li a:hover::before {
+    width: 100%;
+}
+header .mega-menu .links li a .icon {
+    margin-right: 15px;
+    width: 20px;
+}
+/* End Mega Menu */
+
 /* Start Media Query */
-@media (max-width: 767px) {
+@media (max-width: 576px) {
+    header .mega-menu {
+        flex-direction: column;
+        padding: 5px;
+        gap: 0;
+    }
+    header .mega-menu .links li a {
+        font-size: 1rem;
+        padding: 12px;
+    }
+    header .mega-menu .links:first-of-type li:last-child a {
+        border-bottom: 1px solid #e9e6e6;
+    }
+}
+@media (max-width: 768px) {
     header .container {
         justify-content: center;
     }
@@ -77,3 +149,9 @@ header nav > ul > li > a:hover::before {
         font-size: 0.9rem;
     }
 }
+@media (max-width: 992px) {
+    header .mega-menu .image {
+        display: none;
+    }
+}
+/* End Media Query */

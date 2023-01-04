@@ -7,6 +7,8 @@
   --main-color: #2196F3;
   --main-color-alt: #1787e0;
   --main-duration: 0.3s;
+  --section-padding: 100px;
+  --section-background: #ececec;
 }
 /* End variables */
 
@@ -18,6 +20,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  outline: none;
 }
 html {
   scroll-behavior: smooth;
@@ -61,4 +64,85 @@ a {
 /* End Global rules  */
 
 /* Start Components */
+.main-title {
+  margin: 0 auto 80px;
+  width: fit-content;
+  border: 2px solid black;
+  padding: 10px 20px;
+  position: relative;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  transition: var(--main-duration);
+  z-index: 1;
+}
+.main-title:hover {
+  color: white;
+  border-color: white;
+  transition-delay: 0.6s;
+}
+.main-title::before, .main-title::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+.main-title::before {
+  left: -30px;
+}
+.main-title:hover::before {
+  animation: move-left 0.5s linear forwards;
+}
+.main-title::after {
+  right: -30px;
+}
+.main-title:hover::after {
+  animation: move-right 0.5s linear forwards;
+}
+@keyframes move-left {
+  50% {
+    left: 0;
+    width: 12px;
+    height: 12px;
+  }
+  100% {
+    left: 0;
+    border-radius: 0;
+    width: 51%;
+    height: 100%;
+  }
+}
+@keyframes move-right {
+  50% {
+    right: 0;
+    width: 12px;
+    height: 12px;
+  }
+  100% {
+    right: 0;
+    border-radius: 0;
+    width: 51%;
+    height: 100%;
+  }
+}
+/*** dots component ***/
+.dots {
+  background-image: url("./assets/images/dots.png");
+  width: 186px;
+  height: 204px;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+.dots-up {
+  top: 200px;
+  right: 0;
+}
+.dots-down {
+  bottom: 200px;
+  left: 0;
+}
 /* End Components */

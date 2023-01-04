@@ -1,0 +1,122 @@
+.events {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    position: relative;
+}
+.events .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+.events img {
+    max-width: 450px;
+}
+.events .info {
+    flex: 1;
+}
+.events .info .time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+.events .info .time .unit {
+    text-align: center;
+    margin-right: 10px;
+    border: 1px solid #D4D4D4;
+    border-radius: 10px;
+    width: 75px;
+    transition: var(--main-duration) ease-out;
+}
+.events .info .time .unit span {
+    display: block;
+    transition: var(--main-duration) ease-out;
+}
+.events .info .time .unit span:first-child {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: var(--main-color);
+    padding: 15px 0;
+}
+.events .info .time .unit span:last-child {
+    border-top: 1px solid #D4D4D4;
+    padding: 8px 0;
+    font-size: 0.8rem;
+}
+.events .info .time .unit:hover,
+.events .info .time .unit:hover span:last-child {
+    border-color: var(--main-color);
+}
+.events .info h3 {
+    margin: 40px 0;
+    text-align: center;
+    font-size: 1.8rem;
+}
+.events .info p {
+    text-align: center;
+    line-height: 1.7;
+    color: #777;
+    font-size: 1.2rem;
+}
+
+.events .subscribe {
+    width: 100%;
+    margin-top: 50px;
+}
+.events .subscribe form {
+    width: 600px;
+    margin: 20px auto;
+    background-color: #F6F5F5;
+    padding: 25px 40px;
+    display: flex;
+    gap: 20px;
+    border-radius: 50px;
+}
+.events .subscribe input[type="email"] {
+    border: none;
+    padding: 20px;
+    flex: 1;
+    border-radius: 50px;
+    caret-color: var(--main-color);
+}
+.events .subscribe input[type="email"]::placeholder {
+    transition: var(--main-duration);
+}
+.events .subscribe input[type="email"]:focus::placeholder {
+    opacity: 0;
+}
+.events .subscribe input[type="submit"] {
+    color: white;
+    background-color: var(--main-color);
+    padding: 20px;
+    border-radius: 50px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--main-duration);
+}
+.events .subscribe input[type="submit"]:hover {
+    background-color: var(--main-color-alt);
+}
+
+/* Start Media Query  */
+@media (max-width: 992px) {
+    .events img {
+        display: none;
+    }
+}
+@media (max-width: 640px) {
+    .events .subscribe form {
+        max-width: 100%;
+        flex-direction: column;
+        border-radius: 0;
+        padding: 15px 20px;   
+    }
+    .events .subscribe input[type="email"] {
+        border-radius: 0;
+    }
+    .events .subscribe input[type="submit"] {
+        border-radius: 0;
+    }
+}
