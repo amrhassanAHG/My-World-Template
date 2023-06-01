@@ -2,7 +2,7 @@
 
 Responsive website using React, JS, Html5 and CSS3
 
-## Live preview :
+## Demo :
 
 https://amrhassanahg.github.io/My-World-Template/
 
